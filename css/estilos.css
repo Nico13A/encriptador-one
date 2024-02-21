@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background:#F3F5FC;
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    width: 100%;
+}
+
+.container__header {
+    width: 100%;
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.container__main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.container__input {
+    display: flex;
+    justify-content: center;
+    height: clamp(0px, 60vh - 96px, 100vh);
+    margin-bottom: 40px;
+}
+
+.input-content {
+    width: 90%;
+    border: none;
+    background: #FFFFFF00;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #0A3871;
+    resize: none; 
+    outline: none;
+}
+
+.input-content::placeholder {
+    color: #0A3871;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.container__interaccion {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.container__instrucciones {
+    display: flex; 
+    flex-direction: column;
+    gap: 8px;
+}
+
+.container__instrucciones p {
+    font-size: 14px;
+    line-height: 18px;
+    color: #495057;
+}
+
+.container__instrucciones p span {
+    display: inline-block;
+    background-color: #67808E;
+    color: #FFF;
+    border-radius: 100%;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+}
+
+.container__botones {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.container__boton {
+    display: inline-block;
+    border: none;
+    border-radius: 24px;
+    padding: 24px;
+    background: #0A3871;
+    font-size: 16px;
+    color: #FFF;
+    line-height: 19.36px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.container__boton:hover {
+    background: #072448;
+}
+
+.container__boton:last-child {
+    background: none;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+}
+
+.container__boton:last-child:hover {
+    background-color: #E0E4EB;
+    color: #072448;
+}
+
+.container__presentacion {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container__texto {
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    margin-top: 50px;
+    border-radius: 32px;
+    padding: 32px;
+    box-shadow: 0px 24px 32px -8px #00000014;
+    text-align: center;
+    gap: 16px;
+}
+
+.container__persona {
+    display: none;
+}
+
+#tituloDelEncriptado {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    color: #343A40;
+}
+
+.container__textoAMostrar {
+    line-height: 24px;
+    color: #495057;
+}
+
+.container__parrafo {
+    font-size: 24px;
+    word-wrap: break-word;
+    text-align: left;
+    margin: 0 0 20px;
+    line-height: 36px;
+}
+
+.container__boton-oculto {
+    display: none;
+}
+/*
+.container__footer {
+    padding: 20px;
+    font-size: 13px;
+    text-align: center;
+    color: #0A3871;
+    border-top: 1px solid #0A38718D;
+    width: 90%;
+    margin: 60px auto 0;
+}*/
+
+.container__footer {
+    padding: 20px;
+    text-align: center;
+    color: #0A3871;
+    border-top: 1px solid #0A38718D;
+    width: 90%;
+    margin: 60px auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30vh;
+    font-size: 14px;
+}
+
+.footer__title {
+    font-weight: 600;
+}
+
+.footer__list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer__link i {
+    color: #0A3871;
+    font-size: 24px;
+    transition: transform .5s;
+}
+
+.footer__link i:hover {
+    transform: scale(1.5);
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+    .container__header {
+        height: 160px;
+    }
+    .container__input {
+        height: clamp(0px, 60vh - 160px, 100vh);
+    }
+    .input-content {
+        font-size: 32px;
+        line-height: 48px;
+    }
+    .input-content::placeholder {
+        font-size: 32px;
+        line-height: 48px;
+    }
+    .container__botones {
+        flex-direction: row;
+    }
+    .container__boton {
+        flex: 1;
+    }
+    #tituloDelEncriptado {
+        line-height: 28.8px;
+    }
+}
+
+
+
+
+@media screen and (min-width: 1200px) {
+    .container__header {
+        height: 140px;
+    }
+    .container__main {
+        display: grid;
+        grid-template-columns: 1fr repeat(3, 2fr);
+        grid-template-rows: 1fr auto;
+        height: clamp(0px, 90vh - 160px, 100vh);
+        margin: 0;
+    }
+    .container__input {
+        grid-column: 2 / span 2;
+        display: block;
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .input-content {
+        width: 100%;
+        height: 100%;
+    }
+    .container__interaccion {
+        margin: 20px auto 0;
+        width: 90%;
+        grid-column: 2 / span 2;
+        grid-row: 2;
+    }
+    .container__presentacion {
+        grid-column: 4;
+        grid-row: span 2;
+        margin-top: -94px;
+        min-width: 400px;
+        width: 100%;
+    }
+    .container__texto {
+        height: 100%;
+        justify-content: center;
+        padding: 0 32px 32px;
+        box-sizing: content-box;
+        width: 70%;
+        margin: 0 auto;
+    }
+    .container__texto-modificado {
+        justify-content: space-between;
+    }
+    .container__persona {
+        display: inline-block;
+    }
+    .container__persona-modificada {
+        display: none;
+    }
+    .container__tituloEncriptado {
+        display: none;
+    }
+    .container__parrafo {
+        overflow-y: auto;
+    }
+    #container__boton-oculto {
+        flex: 0;
+    }
+    .container__footer {
+        width: 100%;
+        padding: 30px;
+        margin: 120px 0 0;
+        background-color: #0A3871;
+        color: #FFFFFF;
+    }
+    .footer__link i {
+        color: #FFFFFF;
+    }
+}
