@@ -1,27 +1,58 @@
+/**
+ * Borra lo que es ingresado en el input.
+ */
 function limpiarInput() {
     document.getElementById("textoIngresado").value = "";
 }
 
+/**
+ * Toma un selector de elemento HTML y un texto, y asigna ese texto 
+ * como contenido del elemento correspondiente en el DOM.
+ * @param {string} elemento 
+ * @param {string} texto 
+ */
 function asignarTextoElemento(elemento, texto) {
     const elementoHTML = document.querySelector(elemento);
     elementoHTML.innerHTML = texto;
 }
 
+/**
+ * Recibe un selector de elemento HTML y una clase, y le asigna dicha clase 
+ * al elemento.
+ * @param {string} elemento 
+ * @param {string} clase 
+ */
 function asignarEstiloElemento(elemento, clase) {
     const elementoHTML = document.querySelector(elemento);
     elementoHTML.classList.add(clase);
 }
 
+/**
+ * Recibe un selector de elemento HTML y una clase, y le quita dicha clase 
+ * al elemento.
+ * @param {string} elemento 
+ * @param {string} clase 
+ */
 function quitarEstiloElemento(elemento, clase) {
     const elementoHTML = document.querySelector(elemento);
     elementoHTML.classList.remove(clase);
 }
 
+/**
+ * Verifica si el mensaje ingresado cumple con ciertos requisitos, como por ejemplo, no 
+ * acepta números ni letras con acentos.
+ * @param {string} mensaje 
+ * @returns {boolean}
+ */
 function verificarTextoIngresado(mensaje) {
     const expresionRegular = /^[a-z.!$%^&*()_+={}[\]:;<>,?@\\/\s]+$/;
     return expresionRegular.test(mensaje);
 }
 
+/**
+ * Copia lo que se encuentra escrito en el parrafo del aside si es que no incumple
+ * con ciertos requisitos.
+ */
 function copiar() {
     const parrafo = document.getElementById("textoAMostrar").textContent;
     let input = document.querySelector("#textoIngresado");
@@ -30,6 +61,10 @@ function copiar() {
     } 
 }
 
+/**
+ * Se encarga de encriptar el texto que es ingresado por el usuario.
+ * @returns {string}
+ */
 function encriptar() {
     const mensaje = document.getElementById("textoIngresado").value;
     let mensajeEncriptado = "";
@@ -90,6 +125,10 @@ function encriptar() {
     return mensajeEncriptado;
 }
 
+/**
+ * Se encarga de desencriptar el texto que es ingresado por el usuario.
+ * @returns {string}
+ */
 function desencriptar() {
     const mensajeEncriptado = document.getElementById("textoIngresado").value;
     let mensajeDesencriptado = "";
