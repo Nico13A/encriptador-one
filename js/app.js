@@ -201,3 +201,16 @@ function desencriptar() {
 
 asignarTextoElemento("#tituloDelEncriptado", "Ningún mensaje fue encontrado");
 asignarTextoElemento("#textoAMostrar", "Ingresa el texto que deseas encriptar o desencriptar.");
+
+/**
+ * Esta función cambia dinámicamente entre los temas claro y oscuro.
+ */
+function cambiarTema() {
+    const container = document.querySelector(".container");
+    container.classList.toggle("tema-oscuro");
+}
+
+let tema = document.querySelector("#container__tema-button");
+tema.addEventListener("click", cambiarTema);
+
+
