@@ -53,12 +53,25 @@ function verificarTextoIngresado(mensaje) {
  * Copia lo que se encuentra escrito en el parrafo del aside si es que no incumple
  * con ciertos requisitos.
  */
+/*
 function copiar() {
     const parrafo = document.getElementById("textoAMostrar").textContent;
     let input = document.querySelector("#textoIngresado");
     if ((parrafo !== "Ingresa el texto que deseas encriptar o desencriptar." || document.getElementById("tituloDelEncriptado").textContent === "") && parrafo !== "Debe ingresar un texto con letras minúsculas. Además no se admiten letras con acentos ni caracteres especiales.") {
         input.value = parrafo;
     } 
+}*/
+
+function copiar() {
+    const parrafo = document.getElementById("textoAMostrar").textContent;
+
+    navigator.clipboard.writeText(parrafo)
+    .then(() => {
+        console.log('Texto copiado al portapapeles');
+    })
+    .catch(err => {
+        console.error('Error al copiar el texto: ', err);
+    });
 }
 
 /**
