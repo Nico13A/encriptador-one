@@ -8,6 +8,7 @@ body {
     font-family: "Inter", sans-serif;
     background:#F3F5FC;
     min-height: 100vh;
+    height: 100%;
 }
 
 .container {
