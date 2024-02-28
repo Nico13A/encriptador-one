@@ -6,11 +6,10 @@
 
 body {
     font-family: "Inter", sans-serif;
+    background:#F3F5FC;
 }
 
 .container {
-    min-height: 100vh;
-    background:#F3F5FC;
     width: 100%;
     transition: all 0.5s ease;
 }
