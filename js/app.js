@@ -62,16 +62,17 @@ function copiar() {
     } 
 }*/
 
-function copiar() {
+/**
+ * Función asíncrona que copia lo que se encuentra escrito en el parrafo del aside.
+ */
+async function copiar() {
     const parrafo = document.getElementById("textoAMostrar").textContent;
-
-    navigator.clipboard.writeText(parrafo)
-    .then(() => {
-        console.log('Texto copiado al portapapeles');
-    })
-    .catch(err => {
-        console.error('Error al copiar el texto: ', err);
-    });
+    try {
+        await navigator.clipboard.writeText(parrafo);
+        console.log("Texto copiado al portapapeles.");
+    } catch (error) {
+        console.error("Error al copiar el texto: ", error);
+    }
 }
 
 /**
