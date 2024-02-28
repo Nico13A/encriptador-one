@@ -1,5 +1,7 @@
 # Encriptador - Desafío Oracle Next Education
 
+![Encriptador](./img/Encriptador.png)
+
 Desafío del programa ONE, encriptador de texto con Javascript.
 
 ## Descripción
@@ -27,7 +29,16 @@ gaitober" => "gato"
 * La página debe tener campos para inserción del texto que será encriptado o desencriptado, y el usuario debe poder escoger entre as dos opciones.
 * El resultado debe ser mostrado en la pantalla.
 
-### Extras
+### Extras:
 
 * Un botón que copie el texto encriptado/desencriptado para la sección de transferencia, o sea que tenga la misma funcionalidad del ctrl+C o de la opción "copiar" del menú de las aplicaciones.
 
+## Construido con: 
+
+* HTML
+* CSS
+* Javascript
+
+## Autor
+
+Nicolas Antinao
